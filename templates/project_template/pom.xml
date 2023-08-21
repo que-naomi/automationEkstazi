@@ -14,7 +14,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <!-- ADD DEPENDENCIES HERE -->
+    <dependency>
+      <groupId><!-- ADD_GROUP_ID --></groupId>
+      <artifactId><!-- ADD_ARTIFACT_ID --></artifactId>
+      <version><!-- ADD_VERSION --></version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -76,4 +80,3 @@
     </pluginManagement>
   </build>
 </project>
-
