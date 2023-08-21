@@ -25,13 +25,6 @@ while IFS=, read -r combined_id project_version; do
     sed -i "s|<!-- ADD_VERSION -->|$project_version|g" "$project_name/pom.xml"
     sed -i "s|<!-- ADD_PROJECT_NAME -->|$project_name|g" "$project_name/pom.xml"
 
-    # Add specific dependencies
-    echo "    <dependency>" >> "$project_name/pom.xml"
-    echo "        <groupId>com.example</groupId>" >> "$project_name/pom.xml"
-    echo "        <artifactId>example-artifact</artifactId>" >> "$project_name/pom.xml"
-    echo "        <version>1.0.0</version>" >> "$project_name/pom.xml"
-    echo "    </dependency>" >> "$project_name/pom.xml"
-
     # Navigate to the project directory
     cd "$project_name"
 
