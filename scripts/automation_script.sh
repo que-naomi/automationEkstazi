@@ -32,5 +32,14 @@ while IFS=, read -r combined_id project_version; do
     echo "        <version>1.0.0</version>" >> "$project_name/pom.xml"
     echo "    </dependency>" >> "$project_name/pom.xml"
 
+    # Navigate to the project directory
+    cd "$project_name"
+
+    # Run Ekstazi tests
+    mvn ekstazi:ekstazi
+
+    # Return to the main directory
+    cd ..
+
 done < "$CSV_FILE"
 
